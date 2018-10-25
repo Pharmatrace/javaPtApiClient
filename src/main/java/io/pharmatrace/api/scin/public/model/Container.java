@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * Container
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-10-25T12:40:20.883+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-10-25T19:14:50.876+02:00[Europe/Berlin]")
 public class Container {
   public static final String SERIALIZED_NAME_CONTAINER_ID = "container_id";
   @SerializedName(SERIALIZED_NAME_CONTAINER_ID)
