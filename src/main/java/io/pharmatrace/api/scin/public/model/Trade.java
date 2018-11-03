@@ -20,7 +20,7 @@ import io.pharmatrace.api.scin.public.model.Transaction;
 /**
  * Trade
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-03T16:01:52.439+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-03T17:38:32.273+01:00[Europe/Berlin]")
 public class Trade extends Transaction {
 
   @Override

@@ -2,7 +2,11 @@
 
 PharmaTrace Supply Chain Information Network API
 - API version: 0.0.1
+<<<<<<< HEAD
   - Build date: 2018-11-03T16:01:52.439+01:00[Europe/Berlin]
+=======
+  - Build date: 2018-10-25T12:24:56.802+02:00[Europe/Berlin]
+>>>>>>> 21694dca7d7c87ee68a9ae8fd3fe2d33a32323bd
 
 The PharmaTrace SCIN API provides network members a resource and process oriented access to the blockchain backed market and inventory information. It represents a layer of abstraction above the Hyperledger network to facilitate a business focused development of clients and integration systems without the need to directly connect to Hyperledger nodes.
 
