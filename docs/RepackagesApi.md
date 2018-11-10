@@ -21,8 +21,8 @@ Creates a new repackage
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.RepackagesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.RepackagesApi;
 
 
 RepackagesApi apiInstance = new RepackagesApi();
@@ -66,8 +66,8 @@ deletes a single repackage based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.RepackagesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.RepackagesApi;
 
 
 RepackagesApi apiInstance = new RepackagesApi();
@@ -110,8 +110,8 @@ Returns a repackage based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.RepackagesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.RepackagesApi;
 
 
 RepackagesApi apiInstance = new RepackagesApi();
@@ -155,8 +155,8 @@ Returns all repackages from the system that the user has access to Nam sed condi
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.RepackagesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.RepackagesApi;
 
 
 RepackagesApi apiInstance = new RepackagesApi();

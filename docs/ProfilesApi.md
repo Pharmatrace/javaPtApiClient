@@ -21,8 +21,8 @@ Creates a new profile
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.ProfilesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.ProfilesApi;
 
 
 ProfilesApi apiInstance = new ProfilesApi();
@@ -66,8 +66,8 @@ deletes a single profile based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.ProfilesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.ProfilesApi;
 
 
 ProfilesApi apiInstance = new ProfilesApi();
@@ -110,8 +110,8 @@ Returns a profile based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.ProfilesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.ProfilesApi;
 
 
 ProfilesApi apiInstance = new ProfilesApi();
@@ -155,8 +155,8 @@ Returns all profiles from the system that the user has access to Nam sed condime
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.ProfilesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.ProfilesApi;
 
 
 ProfilesApi apiInstance = new ProfilesApi();

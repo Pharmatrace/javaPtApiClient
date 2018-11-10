@@ -21,8 +21,8 @@ Creates a new systeminformation
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.SystemInformationsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.SystemInformationsApi;
 
 
 SystemInformationsApi apiInstance = new SystemInformationsApi();
@@ -66,8 +66,8 @@ deletes a single systeminformation based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.SystemInformationsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.SystemInformationsApi;
 
 
 SystemInformationsApi apiInstance = new SystemInformationsApi();
@@ -110,8 +110,8 @@ Returns all systeminformations from the system that the user has access to Nam s
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.SystemInformationsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.SystemInformationsApi;
 
 
 SystemInformationsApi apiInstance = new SystemInformationsApi();
@@ -157,8 +157,8 @@ Returns a systeminformation based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.SystemInformationsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.SystemInformationsApi;
 
 
 SystemInformationsApi apiInstance = new SystemInformationsApi();

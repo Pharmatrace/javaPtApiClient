@@ -21,8 +21,8 @@ Creates a new informationqueryresponse
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQueryResponsesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQueryResponsesApi;
 
 
 InformationQueryResponsesApi apiInstance = new InformationQueryResponsesApi();
@@ -66,8 +66,8 @@ deletes a single informationqueryresponse based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQueryResponsesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQueryResponsesApi;
 
 
 InformationQueryResponsesApi apiInstance = new InformationQueryResponsesApi();
@@ -110,8 +110,8 @@ Returns all informationqueryresponses from the system that the user has access t
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQueryResponsesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQueryResponsesApi;
 
 
 InformationQueryResponsesApi apiInstance = new InformationQueryResponsesApi();
@@ -157,8 +157,8 @@ Returns a informationqueryresponse based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQueryResponsesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQueryResponsesApi;
 
 
 InformationQueryResponsesApi apiInstance = new InformationQueryResponsesApi();

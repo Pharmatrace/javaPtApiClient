@@ -21,8 +21,8 @@ Creates a new wallet
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.WalletsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.WalletsApi;
 
 
 WalletsApi apiInstance = new WalletsApi();
@@ -66,8 +66,8 @@ deletes a single wallet based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.WalletsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.WalletsApi;
 
 
 WalletsApi apiInstance = new WalletsApi();
@@ -110,8 +110,8 @@ Returns a wallet based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.WalletsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.WalletsApi;
 
 
 WalletsApi apiInstance = new WalletsApi();
@@ -155,8 +155,8 @@ Returns all wallets from the system that the user has access to Nam sed condimen
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.WalletsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.WalletsApi;
 
 
 WalletsApi apiInstance = new WalletsApi();

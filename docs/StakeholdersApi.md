@@ -21,8 +21,8 @@ Creates a new stakeholder
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.StakeholdersApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.StakeholdersApi;
 
 
 StakeholdersApi apiInstance = new StakeholdersApi();
@@ -66,8 +66,8 @@ deletes a single stakeholder based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.StakeholdersApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.StakeholdersApi;
 
 
 StakeholdersApi apiInstance = new StakeholdersApi();
@@ -110,8 +110,8 @@ Returns a stakeholder based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.StakeholdersApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.StakeholdersApi;
 
 
 StakeholdersApi apiInstance = new StakeholdersApi();
@@ -155,8 +155,8 @@ Returns all stakeholders from the system that the user has access to Nam sed con
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.StakeholdersApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.StakeholdersApi;
 
 
 StakeholdersApi apiInstance = new StakeholdersApi();

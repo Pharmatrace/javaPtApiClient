@@ -21,8 +21,8 @@ Creates a new pharmaceutical
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.PharmaceuticalsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.PharmaceuticalsApi;
 
 
 PharmaceuticalsApi apiInstance = new PharmaceuticalsApi();
@@ -66,8 +66,8 @@ deletes a single pharmaceutical based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.PharmaceuticalsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.PharmaceuticalsApi;
 
 
 PharmaceuticalsApi apiInstance = new PharmaceuticalsApi();
@@ -110,8 +110,8 @@ Returns a pharmaceutical based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.PharmaceuticalsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.PharmaceuticalsApi;
 
 
 PharmaceuticalsApi apiInstance = new PharmaceuticalsApi();
@@ -155,8 +155,8 @@ Returns all pharmaceuticals from the system that the user has access to Nam sed 
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.PharmaceuticalsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.PharmaceuticalsApi;
 
 
 PharmaceuticalsApi apiInstance = new PharmaceuticalsApi();

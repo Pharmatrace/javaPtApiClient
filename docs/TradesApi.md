@@ -21,8 +21,8 @@ Creates a new trade
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TradesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TradesApi;
 
 
 TradesApi apiInstance = new TradesApi();
@@ -66,8 +66,8 @@ deletes a single trade based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TradesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TradesApi;
 
 
 TradesApi apiInstance = new TradesApi();
@@ -110,8 +110,8 @@ Returns a trade based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TradesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TradesApi;
 
 
 TradesApi apiInstance = new TradesApi();
@@ -155,8 +155,8 @@ Returns all trades from the system that the user has access to Nam sed condiment
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TradesApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TradesApi;
 
 
 TradesApi apiInstance = new TradesApi();

@@ -21,8 +21,8 @@ Creates a new informationquery
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQuerysApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQuerysApi;
 
 
 InformationQuerysApi apiInstance = new InformationQuerysApi();
@@ -66,8 +66,8 @@ deletes a single informationquery based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQuerysApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQuerysApi;
 
 
 InformationQuerysApi apiInstance = new InformationQuerysApi();
@@ -110,8 +110,8 @@ Returns all informationquerys from the system that the user has access to Nam se
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQuerysApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQuerysApi;
 
 
 InformationQuerysApi apiInstance = new InformationQuerysApi();
@@ -157,8 +157,8 @@ Returns a informationquery based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.InformationQuerysApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.InformationQuerysApi;
 
 
 InformationQuerysApi apiInstance = new InformationQuerysApi();

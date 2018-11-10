@@ -21,8 +21,8 @@ Creates a new legaltxterms
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.LegalTxTermssApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.LegalTxTermssApi;
 
 
 LegalTxTermssApi apiInstance = new LegalTxTermssApi();
@@ -66,8 +66,8 @@ deletes a single legaltxterms based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.LegalTxTermssApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.LegalTxTermssApi;
 
 
 LegalTxTermssApi apiInstance = new LegalTxTermssApi();
@@ -110,8 +110,8 @@ Returns all legaltxtermss from the system that the user has access to Nam sed co
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.LegalTxTermssApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.LegalTxTermssApi;
 
 
 LegalTxTermssApi apiInstance = new LegalTxTermssApi();
@@ -157,8 +157,8 @@ Returns a legaltxterms based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.LegalTxTermssApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.LegalTxTermssApi;
 
 
 LegalTxTermssApi apiInstance = new LegalTxTermssApi();

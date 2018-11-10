@@ -18,8 +18,8 @@ Returns the location history of a container or a individually labeled pharmaceut
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.ContainerApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.ContainerApi;
 
 
 ContainerApi apiInstance = new ContainerApi();

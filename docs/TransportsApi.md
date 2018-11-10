@@ -21,8 +21,8 @@ Creates a new transport
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TransportsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TransportsApi;
 
 
 TransportsApi apiInstance = new TransportsApi();
@@ -66,8 +66,8 @@ deletes a single transport based on the ID supplied
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TransportsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TransportsApi;
 
 
 TransportsApi apiInstance = new TransportsApi();
@@ -110,8 +110,8 @@ Returns a transport based on the ID
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TransportsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TransportsApi;
 
 
 TransportsApi apiInstance = new TransportsApi();
@@ -155,8 +155,8 @@ Returns all transports from the system that the user has access to Nam sed condi
 ### Example
 ```java
 // Import classes:
-//import io.pharmatrace.api.scin.public.ApiException;
-//import io.pharmatrace.api.scin.public.api.TransportsApi;
+//import io.pharmatrace.api.scin.pub.ApiException;
+//import io.pharmatrace.api.scin.pub.api.TransportsApi;
 
 
 TransportsApi apiInstance = new TransportsApi();
