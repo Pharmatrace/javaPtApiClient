@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Activity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class Activity {
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
@@ -74,7 +74,6 @@ public class Activity {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Activity {\n");
-    
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("}");
     return sb.toString();

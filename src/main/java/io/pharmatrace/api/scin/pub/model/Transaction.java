@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Transaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class Transaction {
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
@@ -143,7 +143,6 @@ public class Transaction {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Transaction {\n");
-    
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("    txUid: ").append(toIndentedString(txUid)).append("\n");
     sb.append("    termsId: ").append(toIndentedString(termsId)).append("\n");

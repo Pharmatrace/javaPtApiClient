@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * Wallet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class Wallet {
   public static final String SERIALIZED_NAME_BALANCE = "balance";
   @SerializedName(SERIALIZED_NAME_BALANCE)
@@ -144,7 +144,6 @@ public class Wallet {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Wallet {\n");
-    
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
     sb.append("    walletId: ").append(toIndentedString(walletId)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");

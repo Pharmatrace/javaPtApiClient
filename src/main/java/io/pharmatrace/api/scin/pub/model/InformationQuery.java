@@ -15,13 +15,109 @@ package io.pharmatrace.api.scin.pub.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.pharmatrace.api.scin.pub.model.Transaction;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * InformationQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
-public class InformationQuery extends Transaction {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
+public class InformationQuery {
+  public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
+  @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  private Long timestamp;
+
+  public static final String SERIALIZED_NAME_TX_UID = "tx_uid";
+  @SerializedName(SERIALIZED_NAME_TX_UID)
+  private String txUid;
+
+  public static final String SERIALIZED_NAME_TERMS_ID = "terms_id";
+  @SerializedName(SERIALIZED_NAME_TERMS_ID)
+  private String termsId;
+
+  public static final String SERIALIZED_NAME_TRANSACTION_CHANNEL = "transaction_channel";
+  @SerializedName(SERIALIZED_NAME_TRANSACTION_CHANNEL)
+  private String transactionChannel;
+
+  public InformationQuery timestamp(Long timestamp) {
+    this.timestamp = timestamp;
+    return this;
+  }
+
+   /**
+   * GMT, Unix Epoch
+   * @return timestamp
+  **/
+  @ApiModelProperty(value = "GMT, Unix Epoch")
+  public Long getTimestamp() {
+    return timestamp;
+  }
+
+  public void setTimestamp(Long timestamp) {
+    this.timestamp = timestamp;
+  }
+
+  public InformationQuery txUid(String txUid) {
+    this.txUid = txUid;
+    return this;
+  }
+
+   /**
+   * unique id hash of the transaction
+   * @return txUid
+  **/
+  @ApiModelProperty(value = "unique id hash of the transaction")
+  public String getTxUid() {
+    return txUid;
+  }
+
+  public void setTxUid(String txUid) {
+    this.txUid = txUid;
+  }
+
+  public InformationQuery termsId(String termsId) {
+    this.termsId = termsId;
+    return this;
+  }
+
+   /**
+   * id reference to the terms and conditions for this transaction
+   * @return termsId
+  **/
+  @ApiModelProperty(value = "id reference to the terms and conditions for this transaction")
+  public String getTermsId() {
+    return termsId;
+  }
+
+  public void setTermsId(String termsId) {
+    this.termsId = termsId;
+  }
+
+  public InformationQuery transactionChannel(String transactionChannel) {
+    this.transactionChannel = transactionChannel;
+    return this;
+  }
+
+   /**
+   * hyperledger channel the transaction has been executed in
+   * @return transactionChannel
+  **/
+  @ApiModelProperty(value = "hyperledger channel the transaction has been executed in")
+  public String getTransactionChannel() {
+    return transactionChannel;
+  }
+
+  public void setTransactionChannel(String transactionChannel) {
+    this.transactionChannel = transactionChannel;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -31,12 +127,16 @@ public class InformationQuery extends Transaction {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    InformationQuery informationQuery = (InformationQuery) o;
+    return Objects.equals(this.timestamp, informationQuery.timestamp) &&
+        Objects.equals(this.txUid, informationQuery.txUid) &&
+        Objects.equals(this.termsId, informationQuery.termsId) &&
+        Objects.equals(this.transactionChannel, informationQuery.transactionChannel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(timestamp, txUid, termsId, transactionChannel);
   }
 
 
@@ -44,7 +144,10 @@ public class InformationQuery extends Transaction {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InformationQuery {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
+    sb.append("    txUid: ").append(toIndentedString(txUid)).append("\n");
+    sb.append("    termsId: ").append(toIndentedString(termsId)).append("\n");
+    sb.append("    transactionChannel: ").append(toIndentedString(transactionChannel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

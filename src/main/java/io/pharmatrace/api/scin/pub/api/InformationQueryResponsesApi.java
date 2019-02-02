@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import io.pharmatrace.api.scin.pub.model.Error;
 import io.pharmatrace.api.scin.pub.model.InformationQueryResponse;
-import io.pharmatrace.api.scin.pub.model.Transaction;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -64,7 +63,7 @@ public class InformationQueryResponsesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call addInformationQueryResponseCall(InformationQueryResponse informationQueryResponse, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call addInformationQueryResponseCall(InformationQueryResponse informationQueryResponse, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = informationQueryResponse;
 
         // create path and map variables
@@ -89,15 +88,15 @@ public class InformationQueryResponsesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -105,7 +104,7 @@ public class InformationQueryResponsesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call addInformationQueryResponseValidateBeforeCall(InformationQueryResponse informationQueryResponse, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call addInformationQueryResponseValidateBeforeCall(InformationQueryResponse informationQueryResponse, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'informationQueryResponse' is set
         if (informationQueryResponse == null) {
@@ -113,7 +112,7 @@ public class InformationQueryResponsesApi {
         }
         
 
-        com.squareup.okhttp.Call call = addInformationQueryResponseCall(informationQueryResponse, progressListener, progressRequestListener);
+        okhttp3.Call call = addInformationQueryResponseCall(informationQueryResponse, progressListener, progressRequestListener);
         return call;
 
     }
@@ -138,7 +137,7 @@ public class InformationQueryResponsesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<InformationQueryResponse> addInformationQueryResponseWithHttpInfo(InformationQueryResponse informationQueryResponse) throws ApiException {
-        com.squareup.okhttp.Call call = addInformationQueryResponseValidateBeforeCall(informationQueryResponse, null, null);
+        okhttp3.Call call = addInformationQueryResponseValidateBeforeCall(informationQueryResponse, null, null);
         Type localVarReturnType = new TypeToken<InformationQueryResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -151,7 +150,7 @@ public class InformationQueryResponsesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call addInformationQueryResponseAsync(InformationQueryResponse informationQueryResponse, final ApiCallback<InformationQueryResponse> callback) throws ApiException {
+    public okhttp3.Call addInformationQueryResponseAsync(InformationQueryResponse informationQueryResponse, final ApiCallback<InformationQueryResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -172,7 +171,7 @@ public class InformationQueryResponsesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = addInformationQueryResponseValidateBeforeCall(informationQueryResponse, progressListener, progressRequestListener);
+        okhttp3.Call call = addInformationQueryResponseValidateBeforeCall(informationQueryResponse, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<InformationQueryResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -185,7 +184,7 @@ public class InformationQueryResponsesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteInformationQueryResponseCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call deleteInformationQueryResponseCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -211,15 +210,15 @@ public class InformationQueryResponsesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -227,7 +226,7 @@ public class InformationQueryResponsesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteInformationQueryResponseValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call deleteInformationQueryResponseValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -235,7 +234,7 @@ public class InformationQueryResponsesApi {
         }
         
 
-        com.squareup.okhttp.Call call = deleteInformationQueryResponseCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteInformationQueryResponseCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -258,7 +257,7 @@ public class InformationQueryResponsesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Void> deleteInformationQueryResponseWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = deleteInformationQueryResponseValidateBeforeCall(id, null, null);
+        okhttp3.Call call = deleteInformationQueryResponseValidateBeforeCall(id, null, null);
         return apiClient.execute(call);
     }
 
@@ -270,7 +269,7 @@ public class InformationQueryResponsesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteInformationQueryResponseAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
+    public okhttp3.Call deleteInformationQueryResponseAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -291,7 +290,7 @@ public class InformationQueryResponsesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteInformationQueryResponseValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteInformationQueryResponseValidateBeforeCall(id, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -304,7 +303,7 @@ public class InformationQueryResponsesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findInformationQueryResponsesCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findInformationQueryResponsesCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -337,15 +336,15 @@ public class InformationQueryResponsesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -353,10 +352,10 @@ public class InformationQueryResponsesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findInformationQueryResponsesValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findInformationQueryResponsesValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = findInformationQueryResponsesCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findInformationQueryResponsesCall(tags, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -383,7 +382,7 @@ public class InformationQueryResponsesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<InformationQueryResponse>> findInformationQueryResponsesWithHttpInfo(List<String> tags, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = findInformationQueryResponsesValidateBeforeCall(tags, limit, null, null);
+        okhttp3.Call call = findInformationQueryResponsesValidateBeforeCall(tags, limit, null, null);
         Type localVarReturnType = new TypeToken<List<InformationQueryResponse>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -397,7 +396,7 @@ public class InformationQueryResponsesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findInformationQueryResponsesAsync(List<String> tags, Integer limit, final ApiCallback<List<InformationQueryResponse>> callback) throws ApiException {
+    public okhttp3.Call findInformationQueryResponsesAsync(List<String> tags, Integer limit, final ApiCallback<List<InformationQueryResponse>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -418,7 +417,7 @@ public class InformationQueryResponsesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findInformationQueryResponsesValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findInformationQueryResponsesValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<InformationQueryResponse>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -431,7 +430,7 @@ public class InformationQueryResponsesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findInformationqueryresponseByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findInformationqueryresponseByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -457,15 +456,15 @@ public class InformationQueryResponsesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -473,7 +472,7 @@ public class InformationQueryResponsesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findInformationqueryresponseByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findInformationqueryresponseByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -481,7 +480,7 @@ public class InformationQueryResponsesApi {
         }
         
 
-        com.squareup.okhttp.Call call = findInformationqueryresponseByIdCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findInformationqueryresponseByIdCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -506,7 +505,7 @@ public class InformationQueryResponsesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<InformationQueryResponse> findInformationqueryresponseByIdWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = findInformationqueryresponseByIdValidateBeforeCall(id, null, null);
+        okhttp3.Call call = findInformationqueryresponseByIdValidateBeforeCall(id, null, null);
         Type localVarReturnType = new TypeToken<InformationQueryResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -519,7 +518,7 @@ public class InformationQueryResponsesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findInformationqueryresponseByIdAsync(Long id, final ApiCallback<InformationQueryResponse> callback) throws ApiException {
+    public okhttp3.Call findInformationqueryresponseByIdAsync(Long id, final ApiCallback<InformationQueryResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -540,7 +539,7 @@ public class InformationQueryResponsesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findInformationqueryresponseByIdValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findInformationqueryresponseByIdValidateBeforeCall(id, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<InformationQueryResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

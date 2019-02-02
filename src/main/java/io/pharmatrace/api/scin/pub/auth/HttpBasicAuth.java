@@ -15,7 +15,7 @@ package io.pharmatrace.api.scin.pub.auth;
 
 import io.pharmatrace.api.scin.pub.Pair;
 
-import com.squareup.okhttp.Credentials;
+import okhttp3.Credentials;
 
 import java.util.Map;
 import java.util.List;

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * LegalTxTerms
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class LegalTxTerms {
   public static final String SERIALIZED_NAME_TIMESTAMP_VALID_FROM = "timestamp_valid_from";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP_VALID_FROM)
@@ -258,7 +258,6 @@ public class LegalTxTerms {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LegalTxTerms {\n");
-    
     sb.append("    timestampValidFrom: ").append(toIndentedString(timestampValidFrom)).append("\n");
     sb.append("    timestampValidUntil: ").append(toIndentedString(timestampValidUntil)).append("\n");
     sb.append("    validityTolerance: ").append(toIndentedString(validityTolerance)).append("\n");

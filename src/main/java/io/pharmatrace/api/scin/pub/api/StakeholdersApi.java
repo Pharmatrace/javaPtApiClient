@@ -63,7 +63,7 @@ public class StakeholdersApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call addStakeholderCall(Stakeholder stakeholder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call addStakeholderCall(Stakeholder stakeholder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = stakeholder;
 
         // create path and map variables
@@ -88,15 +88,15 @@ public class StakeholdersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -104,7 +104,7 @@ public class StakeholdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call addStakeholderValidateBeforeCall(Stakeholder stakeholder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call addStakeholderValidateBeforeCall(Stakeholder stakeholder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'stakeholder' is set
         if (stakeholder == null) {
@@ -112,7 +112,7 @@ public class StakeholdersApi {
         }
         
 
-        com.squareup.okhttp.Call call = addStakeholderCall(stakeholder, progressListener, progressRequestListener);
+        okhttp3.Call call = addStakeholderCall(stakeholder, progressListener, progressRequestListener);
         return call;
 
     }
@@ -137,7 +137,7 @@ public class StakeholdersApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Stakeholder> addStakeholderWithHttpInfo(Stakeholder stakeholder) throws ApiException {
-        com.squareup.okhttp.Call call = addStakeholderValidateBeforeCall(stakeholder, null, null);
+        okhttp3.Call call = addStakeholderValidateBeforeCall(stakeholder, null, null);
         Type localVarReturnType = new TypeToken<Stakeholder>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -150,7 +150,7 @@ public class StakeholdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call addStakeholderAsync(Stakeholder stakeholder, final ApiCallback<Stakeholder> callback) throws ApiException {
+    public okhttp3.Call addStakeholderAsync(Stakeholder stakeholder, final ApiCallback<Stakeholder> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -171,7 +171,7 @@ public class StakeholdersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = addStakeholderValidateBeforeCall(stakeholder, progressListener, progressRequestListener);
+        okhttp3.Call call = addStakeholderValidateBeforeCall(stakeholder, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Stakeholder>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -184,7 +184,7 @@ public class StakeholdersApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteStakeholderCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call deleteStakeholderCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -210,15 +210,15 @@ public class StakeholdersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -226,7 +226,7 @@ public class StakeholdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteStakeholderValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call deleteStakeholderValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -234,7 +234,7 @@ public class StakeholdersApi {
         }
         
 
-        com.squareup.okhttp.Call call = deleteStakeholderCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteStakeholderCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -257,7 +257,7 @@ public class StakeholdersApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Void> deleteStakeholderWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = deleteStakeholderValidateBeforeCall(id, null, null);
+        okhttp3.Call call = deleteStakeholderValidateBeforeCall(id, null, null);
         return apiClient.execute(call);
     }
 
@@ -269,7 +269,7 @@ public class StakeholdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteStakeholderAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
+    public okhttp3.Call deleteStakeholderAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -290,7 +290,7 @@ public class StakeholdersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteStakeholderValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteStakeholderValidateBeforeCall(id, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -302,7 +302,7 @@ public class StakeholdersApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findStakeholderByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findStakeholderByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -328,15 +328,15 @@ public class StakeholdersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -344,7 +344,7 @@ public class StakeholdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findStakeholderByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findStakeholderByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -352,7 +352,7 @@ public class StakeholdersApi {
         }
         
 
-        com.squareup.okhttp.Call call = findStakeholderByIdCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findStakeholderByIdCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -377,7 +377,7 @@ public class StakeholdersApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Stakeholder> findStakeholderByIdWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = findStakeholderByIdValidateBeforeCall(id, null, null);
+        okhttp3.Call call = findStakeholderByIdValidateBeforeCall(id, null, null);
         Type localVarReturnType = new TypeToken<Stakeholder>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -390,7 +390,7 @@ public class StakeholdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findStakeholderByIdAsync(Long id, final ApiCallback<Stakeholder> callback) throws ApiException {
+    public okhttp3.Call findStakeholderByIdAsync(Long id, final ApiCallback<Stakeholder> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -411,7 +411,7 @@ public class StakeholdersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findStakeholderByIdValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findStakeholderByIdValidateBeforeCall(id, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Stakeholder>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -425,7 +425,7 @@ public class StakeholdersApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findStakeholdersCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findStakeholdersCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -458,15 +458,15 @@ public class StakeholdersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -474,10 +474,10 @@ public class StakeholdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findStakeholdersValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findStakeholdersValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = findStakeholdersCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findStakeholdersCall(tags, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -504,7 +504,7 @@ public class StakeholdersApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Stakeholder>> findStakeholdersWithHttpInfo(List<String> tags, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = findStakeholdersValidateBeforeCall(tags, limit, null, null);
+        okhttp3.Call call = findStakeholdersValidateBeforeCall(tags, limit, null, null);
         Type localVarReturnType = new TypeToken<List<Stakeholder>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -518,7 +518,7 @@ public class StakeholdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findStakeholdersAsync(List<String> tags, Integer limit, final ApiCallback<List<Stakeholder>> callback) throws ApiException {
+    public okhttp3.Call findStakeholdersAsync(List<String> tags, Integer limit, final ApiCallback<List<Stakeholder>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -539,7 +539,7 @@ public class StakeholdersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findStakeholdersValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findStakeholdersValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<Stakeholder>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

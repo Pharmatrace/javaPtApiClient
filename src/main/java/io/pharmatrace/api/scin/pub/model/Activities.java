@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * Activities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class Activities {
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
@@ -46,7 +46,7 @@ public class Activities {
 
   public static final String SERIALIZED_NAME_HISTORY = "history";
   @SerializedName(SERIALIZED_NAME_HISTORY)
-  private List<Activity> history = null;
+  private List<Activity> history = new ArrayList<Activity>();
 
   public Activities offset(Integer offset) {
     this.offset = offset;
@@ -154,7 +154,6 @@ public class Activities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Activities {\n");
-    
     sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
     sb.append("    count: ").append(toIndentedString(count)).append("\n");

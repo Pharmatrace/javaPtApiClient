@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * Location
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class Location {
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
@@ -167,7 +167,6 @@ public class Location {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Location {\n");
-    
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");

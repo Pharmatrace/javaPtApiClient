@@ -63,7 +63,7 @@ public class LocationsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call addLocationCall(Location location, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call addLocationCall(Location location, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = location;
 
         // create path and map variables
@@ -88,15 +88,15 @@ public class LocationsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -104,7 +104,7 @@ public class LocationsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call addLocationValidateBeforeCall(Location location, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call addLocationValidateBeforeCall(Location location, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'location' is set
         if (location == null) {
@@ -112,7 +112,7 @@ public class LocationsApi {
         }
         
 
-        com.squareup.okhttp.Call call = addLocationCall(location, progressListener, progressRequestListener);
+        okhttp3.Call call = addLocationCall(location, progressListener, progressRequestListener);
         return call;
 
     }
@@ -137,7 +137,7 @@ public class LocationsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Location> addLocationWithHttpInfo(Location location) throws ApiException {
-        com.squareup.okhttp.Call call = addLocationValidateBeforeCall(location, null, null);
+        okhttp3.Call call = addLocationValidateBeforeCall(location, null, null);
         Type localVarReturnType = new TypeToken<Location>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -150,7 +150,7 @@ public class LocationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call addLocationAsync(Location location, final ApiCallback<Location> callback) throws ApiException {
+    public okhttp3.Call addLocationAsync(Location location, final ApiCallback<Location> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -171,7 +171,7 @@ public class LocationsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = addLocationValidateBeforeCall(location, progressListener, progressRequestListener);
+        okhttp3.Call call = addLocationValidateBeforeCall(location, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Location>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -184,7 +184,7 @@ public class LocationsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteLocationCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call deleteLocationCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -210,15 +210,15 @@ public class LocationsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -226,7 +226,7 @@ public class LocationsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteLocationValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call deleteLocationValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -234,7 +234,7 @@ public class LocationsApi {
         }
         
 
-        com.squareup.okhttp.Call call = deleteLocationCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteLocationCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -257,7 +257,7 @@ public class LocationsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Void> deleteLocationWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = deleteLocationValidateBeforeCall(id, null, null);
+        okhttp3.Call call = deleteLocationValidateBeforeCall(id, null, null);
         return apiClient.execute(call);
     }
 
@@ -269,7 +269,7 @@ public class LocationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteLocationAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
+    public okhttp3.Call deleteLocationAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -290,7 +290,7 @@ public class LocationsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteLocationValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteLocationValidateBeforeCall(id, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -302,7 +302,7 @@ public class LocationsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findLocationByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findLocationByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -328,15 +328,15 @@ public class LocationsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -344,7 +344,7 @@ public class LocationsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findLocationByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findLocationByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -352,7 +352,7 @@ public class LocationsApi {
         }
         
 
-        com.squareup.okhttp.Call call = findLocationByIdCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findLocationByIdCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -377,7 +377,7 @@ public class LocationsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Location> findLocationByIdWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = findLocationByIdValidateBeforeCall(id, null, null);
+        okhttp3.Call call = findLocationByIdValidateBeforeCall(id, null, null);
         Type localVarReturnType = new TypeToken<Location>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -390,7 +390,7 @@ public class LocationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findLocationByIdAsync(Long id, final ApiCallback<Location> callback) throws ApiException {
+    public okhttp3.Call findLocationByIdAsync(Long id, final ApiCallback<Location> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -411,7 +411,7 @@ public class LocationsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findLocationByIdValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findLocationByIdValidateBeforeCall(id, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Location>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -425,7 +425,7 @@ public class LocationsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findLocationsCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findLocationsCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -458,15 +458,15 @@ public class LocationsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -474,10 +474,10 @@ public class LocationsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findLocationsValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findLocationsValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = findLocationsCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findLocationsCall(tags, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -504,7 +504,7 @@ public class LocationsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Location>> findLocationsWithHttpInfo(List<String> tags, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = findLocationsValidateBeforeCall(tags, limit, null, null);
+        okhttp3.Call call = findLocationsValidateBeforeCall(tags, limit, null, null);
         Type localVarReturnType = new TypeToken<List<Location>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -518,7 +518,7 @@ public class LocationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findLocationsAsync(List<String> tags, Integer limit, final ApiCallback<List<Location>> callback) throws ApiException {
+    public okhttp3.Call findLocationsAsync(List<String> tags, Integer limit, final ApiCallback<List<Location>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -539,7 +539,7 @@ public class LocationsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findLocationsValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findLocationsValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<Location>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

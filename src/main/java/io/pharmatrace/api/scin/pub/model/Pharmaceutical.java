@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Pharmaceutical
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class Pharmaceutical {
   public static final String SERIALIZED_NAME_PHARMACEUTICAL_ID = "pharmaceutical_id";
   @SerializedName(SERIALIZED_NAME_PHARMACEUTICAL_ID)
@@ -189,7 +189,6 @@ public class Pharmaceutical {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Pharmaceutical {\n");
-    
     sb.append("    pharmaceuticalId: ").append(toIndentedString(pharmaceuticalId)).append("\n");
     sb.append("    gtin: ").append(toIndentedString(gtin)).append("\n");
     sb.append("    tradeName: ").append(toIndentedString(tradeName)).append("\n");

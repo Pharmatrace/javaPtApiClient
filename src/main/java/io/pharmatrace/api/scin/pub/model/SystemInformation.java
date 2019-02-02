@@ -28,7 +28,7 @@ import java.io.IOException;
  * Global system message from PT node operators / Newsfeed
  */
 @ApiModel(description = "Global system message from PT node operators / Newsfeed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class SystemInformation {
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
@@ -144,7 +144,6 @@ public class SystemInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SystemInformation {\n");
-    
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    header: ").append(toIndentedString(header)).append("\n");

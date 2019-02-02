@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import io.pharmatrace.api.scin.pub.model.Error;
 import io.pharmatrace.api.scin.pub.model.Trade;
-import io.pharmatrace.api.scin.pub.model.Transaction;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -64,7 +63,7 @@ public class TradesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call addTradeCall(Trade trade, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call addTradeCall(Trade trade, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = trade;
 
         // create path and map variables
@@ -89,15 +88,15 @@ public class TradesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -105,7 +104,7 @@ public class TradesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call addTradeValidateBeforeCall(Trade trade, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call addTradeValidateBeforeCall(Trade trade, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'trade' is set
         if (trade == null) {
@@ -113,7 +112,7 @@ public class TradesApi {
         }
         
 
-        com.squareup.okhttp.Call call = addTradeCall(trade, progressListener, progressRequestListener);
+        okhttp3.Call call = addTradeCall(trade, progressListener, progressRequestListener);
         return call;
 
     }
@@ -138,7 +137,7 @@ public class TradesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Trade> addTradeWithHttpInfo(Trade trade) throws ApiException {
-        com.squareup.okhttp.Call call = addTradeValidateBeforeCall(trade, null, null);
+        okhttp3.Call call = addTradeValidateBeforeCall(trade, null, null);
         Type localVarReturnType = new TypeToken<Trade>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -151,7 +150,7 @@ public class TradesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call addTradeAsync(Trade trade, final ApiCallback<Trade> callback) throws ApiException {
+    public okhttp3.Call addTradeAsync(Trade trade, final ApiCallback<Trade> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -172,7 +171,7 @@ public class TradesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = addTradeValidateBeforeCall(trade, progressListener, progressRequestListener);
+        okhttp3.Call call = addTradeValidateBeforeCall(trade, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Trade>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -185,7 +184,7 @@ public class TradesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteTradeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call deleteTradeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -211,15 +210,15 @@ public class TradesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -227,7 +226,7 @@ public class TradesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteTradeValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call deleteTradeValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -235,7 +234,7 @@ public class TradesApi {
         }
         
 
-        com.squareup.okhttp.Call call = deleteTradeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteTradeCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -258,7 +257,7 @@ public class TradesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Void> deleteTradeWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = deleteTradeValidateBeforeCall(id, null, null);
+        okhttp3.Call call = deleteTradeValidateBeforeCall(id, null, null);
         return apiClient.execute(call);
     }
 
@@ -270,7 +269,7 @@ public class TradesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteTradeAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
+    public okhttp3.Call deleteTradeAsync(Long id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -291,7 +290,7 @@ public class TradesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteTradeValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = deleteTradeValidateBeforeCall(id, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -303,7 +302,7 @@ public class TradesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findTradeByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findTradeByIdCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -329,15 +328,15 @@ public class TradesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -345,7 +344,7 @@ public class TradesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findTradeByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findTradeByIdValidateBeforeCall(Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -353,7 +352,7 @@ public class TradesApi {
         }
         
 
-        com.squareup.okhttp.Call call = findTradeByIdCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findTradeByIdCall(id, progressListener, progressRequestListener);
         return call;
 
     }
@@ -378,7 +377,7 @@ public class TradesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Trade> findTradeByIdWithHttpInfo(Long id) throws ApiException {
-        com.squareup.okhttp.Call call = findTradeByIdValidateBeforeCall(id, null, null);
+        okhttp3.Call call = findTradeByIdValidateBeforeCall(id, null, null);
         Type localVarReturnType = new TypeToken<Trade>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -391,7 +390,7 @@ public class TradesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findTradeByIdAsync(Long id, final ApiCallback<Trade> callback) throws ApiException {
+    public okhttp3.Call findTradeByIdAsync(Long id, final ApiCallback<Trade> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -412,7 +411,7 @@ public class TradesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findTradeByIdValidateBeforeCall(id, progressListener, progressRequestListener);
+        okhttp3.Call call = findTradeByIdValidateBeforeCall(id, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Trade>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -426,7 +425,7 @@ public class TradesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call findTradesCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call findTradesCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -459,15 +458,15 @@ public class TradesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if (progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
+                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                            .build();
                 }
-            });
+            }).build());
         }
 
         String[] localVarAuthNames = new String[] {  };
@@ -475,10 +474,10 @@ public class TradesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call findTradesValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call findTradesValidateBeforeCall(List<String> tags, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = findTradesCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findTradesCall(tags, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -505,7 +504,7 @@ public class TradesApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Trade>> findTradesWithHttpInfo(List<String> tags, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = findTradesValidateBeforeCall(tags, limit, null, null);
+        okhttp3.Call call = findTradesValidateBeforeCall(tags, limit, null, null);
         Type localVarReturnType = new TypeToken<List<Trade>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -519,7 +518,7 @@ public class TradesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findTradesAsync(List<String> tags, Integer limit, final ApiCallback<List<Trade>> callback) throws ApiException {
+    public okhttp3.Call findTradesAsync(List<String> tags, Integer limit, final ApiCallback<List<Trade>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -540,7 +539,7 @@ public class TradesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = findTradesValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
+        okhttp3.Call call = findTradesValidateBeforeCall(tags, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<Trade>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

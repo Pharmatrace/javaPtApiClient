@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * Container
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2018-11-10T20:07:55.800+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
 public class Container {
   public static final String SERIALIZED_NAME_CONTAINER_ID = "container_id";
   @SerializedName(SERIALIZED_NAME_CONTAINER_ID)
@@ -282,7 +282,6 @@ public class Container {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Container {\n");
-    
     sb.append("    containerId: ").append(toIndentedString(containerId)).append("\n");
     sb.append("    epcCode: ").append(toIndentedString(epcCode)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
