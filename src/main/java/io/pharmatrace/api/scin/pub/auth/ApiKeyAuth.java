@@ -18,7 +18,7 @@ import io.pharmatrace.api.scin.pub.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-02-02T19:48:32.618+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-03-24T07:05:03.871+01:00[Europe/Berlin]")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;
